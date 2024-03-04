@@ -1,0 +1,12 @@
+<div style="text-align: center;">
+      <h1>Autocomplate </h1>
+      <form  class="example-form">
+          <mat-form-field>
+              <input matInput [matAutocomplete]="auto" [formControl]="formcontrol">
+          </mat-form-field>
+          <mat-autocomplete autoActiveFirstOption #auto>
+              <mat-option *ngFor="let item of filteroptions | async" [value]="item.code + ' - ' + item.name">{{item.code}}|{{item.name}}</mat-option>
+          </mat-autocomplete>
+      </form>
+
+</div>

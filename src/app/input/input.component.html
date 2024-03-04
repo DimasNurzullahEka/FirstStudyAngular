@@ -1,0 +1,29 @@
+<div style="text-align: center;">
+  <h2>Tutorial Angular Material</h2>
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Favorite food</mat-label>
+      <input matInput placeholder="Ex. Pizza" value="Sushi">
+    </mat-form-field>
+
+    <!-- <mat-form-field class="example-full-width">
+      <mat-label>Leave a comment</mat-label>
+      <input matInput [matAutocomplete]="auto" placeholder="Type or select an option">
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option value="Option 1">Option 1</mat-option>
+        <mat-option value="Option 2">Option 2</mat-option>
+        <mat-option value="Option 3">Option 3</mat-option>
+      </mat-autocomplete>
+    </mat-form-field> -->
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Select an option</mat-label>
+      <mat-select>
+        <mat-option value="Option A">Option A</mat-option>
+        <mat-option value="Option B">Option B</mat-option>
+        <mat-option value="Option C">Option C</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+
+</div>

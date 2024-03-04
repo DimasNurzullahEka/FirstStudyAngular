@@ -1,0 +1,48 @@
+<mat-toolbar color="primary">
+    <button (click)="drawer.toggle()" mat-icon-button>
+       <mat-icon>menu</mat-icon>
+    </button>
+    <span>Material UI </span>
+    <span class="example-space"></span>
+    <button routerLink="" mat-button> Dashboard</button>
+    <button [matMenuTriggerFor]="lvlmaster" mat-button> Home</button>
+    <mat-menu #lvlmaster="matMenu">
+        <button [matMenuTriggerFor]="Company" mat-menu-item>Sub Menu</button>
+        <button routerLink="card" mat-menu-item>Card</button>
+        <button mat-menu-item>Product</button>
+    </mat-menu>
+    <mat-menu #Company="matMenu">
+        <button mat-menu-item>Term</button>
+        <button mat-menu-item>Tax</button>
+        <button mat-menu-item>Currency</button>
+    </mat-menu>
+    <button routerLink="input" mat-button> Input</button>
+    <button routerLink="autocomplate" mat-button> autocomplate</button>
+    <button mat-raised-button color="accent">Sign In</button>
+    <!-- <button mat-raised-button color="primary" routerLink="/github">
+         <mat-icon>github</mat-icon>
+      </button> -->
+      <button mat-icon-button>
+            <!-- <mat-icon>dashboard</mat-icon> -->
+            <mat-icon matBadge="15" matBadgeColor="warn">home</mat-icon>
+      </button>
+</mat-toolbar>
+<mat-drawer-container autosize>
+    <mat-drawer #drawer opened="true" mode="side" position="start">
+        <mat-nav-list>
+            <mat-list-item>
+                <button mat-button><mat-icon>dashboard</mat-icon>Dashboard</button>
+            </mat-list-item>
+            <mat-list-item>
+              <button mat-button><mat-icon>settings</mat-icon>Settings</button>
+          </mat-list-item><mat-list-item>
+            <button mat-button><mat-icon>help</mat-icon>Help</button>
+        </mat-list-item>
+        </mat-nav-list>
+    </mat-drawer>
+    <mat-drawer-content>
+        <div style="text-align: center; min-height: 600px;">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>

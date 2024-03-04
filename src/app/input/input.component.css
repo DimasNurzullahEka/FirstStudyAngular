@@ -1,0 +1,11 @@
+.example-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.example-full-width {
+  width: 100%;
+  max-width: 400px; /* Atur lebar maksimum sesuai kebutuhan Anda */
+  margin-bottom: 20px; /* Atur margin bawah sesuai kebutuhan Anda */
+}
